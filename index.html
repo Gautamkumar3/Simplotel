@@ -16,8 +16,10 @@
   </head>
   <body>
     <nav class="navbar">
-      <div></div>
-      <ul>
+      <div class="blank">
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+      </div>
+      <ul class="nav_items">
         <li><a href="#">Home</a></li>
         <li><a href="#">Order</a></li>
         <li><a href="#">Food</a></li>
@@ -42,9 +44,9 @@
         </section>
       </section>
     </main>
-    <section class="card_section">
+    <div class="card_section">
       <h1>Order Now</h1>
-      <section class="card_container">
+      <div class="card_container">
         <div class="card">
           <img src="./Images/img4.jpg" alt="img3" class="img" />
           <h3>BURGER</h3>
@@ -69,8 +71,22 @@
             labore?
           </p>
         </div>
-      </section>
+      </div>
       <button class="order_btn">Order</button>
-    </section>
+    </div>
   </body>
+  <script>
+    let hamburger = document.getElementById("hamburger");
+    let NavItem = document.querySelector(".nav_items");
+    let toogle = true;
+
+    hamburger.addEventListener("click", () => {
+      toogle = !toogle;
+      if (toogle) {
+        NavItem.style.display = "block";
+      } else {
+        NavItem.style.display = "none";
+      }
+    });
+  </script>
 </html>
